@@ -32,7 +32,7 @@ To run this project locally, follow the steps below:
 1. **Clone the repository:**
 
    ```bash
-   git clone [Quiz-Royal](https://github.com/OmkarSonawane1230/Quiz-Royale)
+   git clone [QuizRoyale](https://github.com/OmkarSonawane1230/Quiz-Royale/)
    cd quiz-royale
 
 2. **Run the following Commands to Run the Project**
