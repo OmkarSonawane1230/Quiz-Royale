@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Quiz Royale</title>
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <form action="/send-user-details" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="Genere">Quiz Room Genere</label>
+            <input type="text" id="roomGenere" name="roomGenere" required placeholder="Enter your quiz room number">
+
+            <button type="submit" id="submit">Create Account</button>
+        </form>
+    </div>
+
+    <!-- script files -->
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>

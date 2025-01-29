@@ -1,0 +1,16 @@
+{
+  "name": "quiz-royale",
+  "version": "1.0.0",
+  "description": "## 🏆 Overview Quiz Royale is a fun and competitive multiplayer quiz game where players compete against each other in real-time trivia battles. Test your knowledge, challenge others, and climb the leaderboard to claim the title of the ultimate quiz champion. Featuring a variety of question categories, real-time multiplayer matches, and an engaging UI, Quiz Royale is designed for quiz lovers who want to experience competitive learning!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Omkar Sonawane",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "firebase": "^11.2.0"
+  }
+}
