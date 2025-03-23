@@ -1,0 +1,42 @@
+/*** Room creation ***/
+body {
+    min-height: 100dvh;
+}
+
+.form-container {
+    flex-direction: column;
+    gap: 4rem;
+
+    position: relative;
+
+    background-color: var(--element-background);
+    width: min(100%, 30rem);
+    height: min(100%, 40rem);
+    padding: clamp(2rem, .5rem + 1vw, 4rem);
+}
+
+.form-room {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+h2 {
+    font-size: clamp(3rem, 1.5rem + 1vw, 5rem);
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+/* input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+} */
+
+button:hover {
+    background-color: #45a049;
+}

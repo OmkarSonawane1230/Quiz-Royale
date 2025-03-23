@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/createroom.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+    <title>Quiz Royale</title>
+</head>
+<body class="flex-container">
+
+    <div class="form-container flex-container br-1">
+        <h2>Create Room</h2>
+        <form action="/createroom" class="flex-container form-room" method="POST">
+            <input type="text" id="name" name="name" class="br-2 input-ele input-parm" required placeholder="Enter your name">
+
+            <input type="text" id="password" name="password" class="br-2 input-ele input-parm" required placeholder="Password">
+            
+            <input type="text" id="roomGenere" name="roomGenere" class="br-2 input-ele input-parm" required placeholder="Room Genere">
+            
+            <div class="flex-container">
+                <button type="submit" id="submit" class="br-2 input-ele input-parm">Create Room</button>
+                <button type="button" id="back" class="br-2 input-ele input-parm">Back</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- script files -->
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
