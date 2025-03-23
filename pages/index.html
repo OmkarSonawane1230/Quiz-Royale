@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Quiz Royale</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/media-query.css">
+  <title>Quiz Royale</title>
 </head>
+
 <body>
-    
-    <div class="form-container">
-        <h2>Create Account</h2>
-        <form action="/send-user-details" method="POST">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-
-            <label for="Genere">Quiz Room Genere</label>
-            <input type="text" id="roomGenere" name="roomGenere" required placeholder="Enter your quiz room number">
-
-            <button type="submit" id="submit">Create Account</button>
-        </form>
+  <nav class="navigation flex-container">
+    <div class="left-part flex-container">
+      <h2>Quiz Royale</h2>
+      <div class="logos" id="menubtn" onclick="this.classList.toggle('active')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+          <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+            <animate dur="0.2s" attributeName="d"
+              values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+              begin="start.begin" />
+            <animate dur="0.2s" attributeName="d"
+              values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+              begin="reverse.begin" />
+          </path>
+          <rect width="10" height="10" stroke="none">
+            <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+          </rect>
+          <rect width="10" height="10" stroke="none">
+            <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+            <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+          </rect>
+        </svg>
+      </div>
     </div>
 
-    <!-- script files -->
-    <script src="scripts/script.js" defer></script>
+    <button type="button" id="createroom" class="br-2 input-ele input-parm">Create Room</button>
+    <button type="button" id="joinroom" class="br-2 input-ele input-parm">Join Room</button>
+  </nav>
+ 
+
+  <!-- <div class="form-container flex-container br-1">
+        <h2>Create Room</h2>
+        <form action="/create-room" class="flex-container form-room" method="POST">
+            <input type="text" id="name" name="name" class="br-2 input-ele input-parm" required placeholder="Enter your name">
+
+            <input type="text" id="password" name="password" class="br-2 input-ele input-parm" required placeholder="Password">
+            
+            <input type="text" id="roomGenere" name="roomGenere" class="br-2 input-ele input-parm" required placeholder="Room Genere">
+            
+            <button type="submit" id="submit" class="br-2 input-ele input-parm">Create Room</button>
+        </form>
+    </div> -->
+
+  <!-- script files -->
+  <script src="scripts/main.js" defer></script>
 </body>
+
 </html>

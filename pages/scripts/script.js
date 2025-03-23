@@ -1,7 +1,18 @@
 // UI Elements
 const submitBtn = document.getElementById('submit');
+const backBtn = document.getElementById('back');
 const nameEle = document.getElementById('name');
 const roomGenere = document.getElementById('roomGenere');
+const password = document.getElementById('password');
+
+backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const baseURL = location.href;
+    const len = baseURL.length
+
+    location.replace(baseURL.substring(0, len - 10));
+})
 
 async function postData(url = "", data = {}, method_ = "") {
     const response = await fetch(url, {
@@ -20,10 +31,11 @@ submitBtn.addEventListener('click', () => {
     const data = {
         name: `${nameEle.value}`,
         roomGenere: `${roomGenere.value}`,
+        password: `${password.value}`,
         time: `${d.substring(0, 24)}`,
     }
     
-    postData("/send-user-details", data, "POST")
+    postData("/createroom", data, "POST")
 })
 
 // To get data from server
