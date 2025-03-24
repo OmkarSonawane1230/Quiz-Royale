@@ -34,6 +34,10 @@ app.get('/createroom', (req, res) => {
     res.sendFile(path.join(__dirname, '/pages/createroom.html'));
 })
 
+app.get('/joinroom', (req, res) => {
+    res.sendFile(path.join(__dirname, '/pages/joinroom.html'));
+})
+
 app.get('/room/:roomId', (req, res) => {
     const { roomId } = req.params;
     // const data = JSON.parse(JSON.stringify(req.body))

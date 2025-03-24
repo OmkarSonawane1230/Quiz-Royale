@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-query.css">
+    <link rel="stylesheet" href="styles/room.css">
     <title>Quiz Royale</title>
 </head>
 <body>
-    
-    <div class="form-container flex-container br-1">
-        <h2>Join Room</h2>
-        <form action="/join-room" class="flex-container form-room" method="POST">
-            <input type="text" id="name" name="name" class="br-2 input-ele input-parm" required placeholder="Enter your name">
-
-            <input type="text" id="password" name="password" class="br-2 input-ele input-parm" required placeholder="Password">
+    <div class="container">
+        This Room
+        <!-- MCQ answers template -->
+        <form action="/room" class="flex-container form-room" method="POST">
             
-            <button type="submit" id="submit" class="br-2 input-ele input-parm">Join Room</button>
+            <h2 id="question">What is the capital of India</h2>
+            <div class="multiple-choice">
+                <ul>
+                    <li>
+                        <input type="radio" name="mcq-answer">
+                        <span id="option1">abc</span>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="mcq-answer">
+                        <span id="option2">abc2</span>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="mcq-answer">
+                        <span id="option3">abc3</span>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="mcq-answer">
+                        <span id="option3">abc4</span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="flex-container">
+                <button type="submit" id="submit" class="br-2 input-ele input-parm">Submit Answer</button>
+                <button type="button" id="exit" class="br-2 input-ele input-parm">Exit Room</button>
+            </div>
         </form>
+
     </div>
 
     <!-- script files -->
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/room.js" defer></script>
 </body>
 </html>
