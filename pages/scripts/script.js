@@ -5,9 +5,7 @@ const nameEle = document.getElementById('name');
 const roomGenere = document.getElementById('roomGenere');
 const password = document.getElementById('password');
 
-backBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-
+backBtn.addEventListener('click', () => {
     const baseURL = location.href;
     const len = baseURL.length
 
@@ -25,7 +23,7 @@ async function postData(url = "", data = {}, method_ = "") {
     return response.json();
 }
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', async () => {
     let d = new Date()
     d = d.toString()
     const data = {
@@ -34,7 +32,8 @@ submitBtn.addEventListener('click', () => {
         password: `${password.value}`,
         time: `${d.substring(0, 24)}`,
     }
-    
+    localStorage.setItem('approve', true);
+    localStorage.setItem('player', nameEle.value);
     postData("/createroom", data, "POST")
 })
 

@@ -12,16 +12,16 @@
 
     <div class="form-container flex-container br-1">
         <h2>Create Room</h2>
-        <form action="/createroom" class="flex-container form-room" method="POST">
+        <form class="flex-container form-room" method="POST">
             <input type="text" id="name" name="name" class="br-2 input-ele input-parm" required placeholder="Enter your name">
 
             <input type="text" id="password" name="password" class="br-2 input-ele input-parm" required placeholder="Password">
             
             <input type="text" id="roomGenere" name="roomGenere" class="br-2 input-ele input-parm" required placeholder="Room Genere">
             
-            <div class="flex-container">
-                <button type="submit" id="submit" class="br-2 input-ele input-parm">Create Room</button>
+            <div class="flex-container input-controls">
                 <button type="button" id="back" class="br-2 input-ele input-parm">Back</button>
+                <button type="submit" id="submit" class="br-2 input-ele input-parm">Create Room</button>
             </div>
         </form>
     </div>

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/createroom.css">
     <link rel="stylesheet" href="styles/media-query.css">
     <title>Quiz Royale</title>
 </head>
-<body>
+<body class="flex-container">
     
     <div class="form-container flex-container br-1">
         <h2>Join Room</h2>
-        <form action="/join-room" class="flex-container form-room" method="POST">
+        <form id="room" class="flex-container form-room" >
             <input type="text" id="name" name="name" class="br-2 input-ele input-parm" required placeholder="Enter your name">
 
             <input type="text" id="password" name="password" class="br-2 input-ele input-parm" required placeholder="Password">
@@ -21,6 +22,6 @@
     </div>
 
     <!-- script files -->
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/joinroom.js" defer></script>
 </body>
 </html>

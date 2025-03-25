@@ -1,5 +1,9 @@
 /* For small devices (portrait phones, between 576px and 767px) */
 @media (width < 767px) {
+    body {
+        padding: 0;
+    }
+
     .form-container {
         border-radius: 0px;
         border: 0px;
